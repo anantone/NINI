@@ -1,0 +1,7 @@
+There seems to be a [known bug](https://github.com/goldsmith/Wikipedia/issues/107) in the wikipedia package, which will throw an error message when performing a search.
+
+It can be fixed by editing wikipedia.py line 389 as described in the warning, adding "html.parser" as the second argument of the BeautifulSoup constructor:
+
+     lis = BeautifulSoup(html, "html.parser").find_all('li')
+
+A link to the file in your virtual environment will be conveniently provided the first time the error occurs...
