@@ -1,0 +1,1 @@
+% rebase('base.tpl', title='White paper')
